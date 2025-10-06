@@ -82,8 +82,8 @@ body {
       background-color: lightcoral;
     }
 
-#birthDate:valid, /* makes it so the birthdate field is ignored when it comes to validity*/
-#birthDate:invalid {
+#birthDate, #firstName, #lastName:valid, /* makes it so these fields are ignored when it comes to validity*/
+#birthDate, #firstName, #lastName:invalid {
   background-color: white;
   border-color: gray;
 }
@@ -147,6 +147,20 @@ body {
     transform: scale(0.95); /*slightly shrinks button on click*/
 }
 
+#output_html5Form {
+    display: none;
+    background-color: rgba(41, 77, 4, 0.594);
+    color: whitesmoke; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+
+}
+
 /*JS Form Container*/
 
 .js_form {
@@ -206,7 +220,7 @@ body {
 
 }
 
-/* hover and active states for submit button */
+/* hover and active states for js submit button */
 .js_form_submit:hover {
     background-color: #51b331;
     transform: scale(1.05); /*slightly enlarges button on hover*/
@@ -217,15 +231,17 @@ body {
     transform: scale(0.95); /*slightly shrinks button on click*/
 }
 
-/* output section styles */
-#output {
-    display: none; /*hidden by default*/
+/* js output section styles */
+#output_jsForm {
+    display: none;
+    background-color: rgba(41, 77, 4, 0.594);
+    color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
     margin: 10px auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 600px;
     gap: 10px;
 
 }

@@ -58,14 +58,14 @@
                 </div>
             </div>
             <!-- Agreement-->
-             <div class="agreements">
-                <div class="agree_no_journal">
-                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                    <label for="agreeTerms">I agree not to journal while driving, walking down a trail, being chased by a wild animal, swimming, etc.</label>
+             <div class="agreementsGroup">
+                <div class="agree_safe">
+                    <input type="checkbox" id="agree-safe" name="agreements[]" class="checkbox_item_input" value="safe" required>
+                    <label for="agree-safe" class="checkbox_item_label">I agree not to journal while driving, walking down a trail, being chased by a wild animal, swimming, etc.</label>
                 </div>
                 <div class="agree_enjoy">
-                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                <label for="agreeTerms">I agree to enjoy traveling and life to the best of my abilities.</label>  
+                <input type="checkbox" id="agree-enjoy" name="agreements[]" class="checkbox_item_input" value="enjoy" required>
+                <label for="agree-enjoy" class="checkbox_item_label">I agree to enjoy traveling and life to the best of my abilities.</label>  
                 </div> 
             </div>
        <!--Submit & Reset Buttons-->
@@ -73,28 +73,31 @@
         <button class="html5_form_submit" type="submit">Submit</button>
         <button class="html5_form_reset" type="reset">Clear Top Form</button>
         </div>
+         <!-- Live region for JS messages -->
+    <div id="output_html5Form" class="html5FormMessage" aria-live="polite" role="status" aria-atomic="true"></div>
     </form>
 
     <!--JavaScript Form-->
     <h2> Alternate Username</h2>
-    <form action="" class="js_form" id="js_form">
-        <!-- Alt Username and Agreement Checkbox-->
-        <p>Please enter an alternate username below in case your first one is taken.</p>
+    <form action="" class="js_form" id="js_form" novalidate>
+    <p>Please enter an alternate username below in case your first one is taken.</p>
+
         <div class="js_form_row">
-            <div class ="js_form_field">
-                <label for="altUsername" class="js_form_field_label">Alternate Username:</label>
-                <input type="text" id="altUsername" name="altUsername" class="js_form_field_input" aria-describedby="altUsernameHelp">
+         <div class="js_form_field">
+            <label for="altUsername" class="js_form_field_label">Alternate Username:</label>
+            <input type="text" id="altUsername" name="altUsername" class="js_form_field_input" aria-describedby="altUsernameHelp output_jsForm">
             <b id="altUsernameHelp">Usernames must be at least 5 characters</b>
-            </div>
-             <div class="js_button">
-                <button class="js_form_submit" type="submit">Submit Alternate Username</button>
         </div>
-           
-            </div>
-            <br>
-            
-        </div>
-    </form>
+    </div>
+
+    <div class="js_button">
+        <button class="js_form_submit" type="submit">Submit Alternate Username</button>
+    </div>
+
+    <!-- Live region for JS messages -->
+    <div id="output_jsForm" class="jsFormMessage" aria-live="polite" role="status" aria-atomic="true"></div>
+</form>
+
 </main>
 <!--JavaScript-->
     <script src="./script.js"></script>
