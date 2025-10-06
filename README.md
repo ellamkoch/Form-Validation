@@ -16,22 +16,32 @@ This assignment involves creating an HTML-only webpage that features a form with
 -.gitignore 
 
 ## How the Form Works
-The form includes both HTML5 and JavaScript validations. All validations function correctly, preventing form submission on invalid data. 
+The webpage includes **two forms** — one using HTML5 validation and another using JavaScript validation. Both prevent form submission when invalid data is entered.
 
-Data for the top form, which is based on HTML5 validation, displays entered after the submit button is pressed. Validation is turned on for the following fields:
--email
--Username - minimum of 5 characters
--Password - minimum of 8 characters
--Agreement checkboxes
+### HTML5 Validation (Top Form)
+- Displays entered data after the Submit button is pressed.  
+- Validations are turned on for the following fields:
+  - Email  
+  - Username (minimum of 5 characters)  
+  - Password (minimum of 8 characters)  
+  - Agreement checkboxes (required)  
 
-An event listener was added on the top and the bottom to prevent form submission and show the data entered. Password field isnt shown to protect the data that was entered that field. I could put something in next time to say that the Password was accepted, or meets the minimum requirements. A second event listener was added to the top to clear the output area for the top part of the form and any other data that may be left in the top part of the form. 
+An event listener prevents the form from submitting to the server and instead displays the entered data below the form. For privacy, the password is not shown in the output—though a message could be added in the future to confirm that the password met requirements.
 
-The Alternate Username area is for the JavaScript validation portion of the assignment. I tried to use something that may be a real-life instance, though checking of valid usernames is much fancier now and doesn't require a submission based upon how the site is coded. This is a good start though for now! 
+Another event listener clears the output area and resets all input fields when the **Clear Top Form** button is clicked.
 
-There is an event listner for the Alt Username part of the form that checks to see if enough characters were entered. If not, it will say that the username must be as long as the minimum length indicated in the JS validation, which is 5. If it is 5 or more, then it says the username length is valid. This is in an output area, similar to the html5 part of the form above that shows the message upon checking to see if the username is valid or not. 
+### JavaScript Validation (Alternate Username)
+This second form represents a simple JS-only validation example. It checks whether an alternate username meets the required minimum length (5 characters).  
 
-## Testing/Debugging
-Utilized the Live Server addon to test the form/debug it and to double check the console within the browser. Also used the "problems" section in vs Code to help identify areas that were coded incorrectly.
+- If too short, a message appears saying the username must be at least 5 characters long.  
+- If valid, a success message appears.  
+
+The message appears dynamically in an output area below the input field. This mimics how a real-world form might check usernames, even though most modern implementations now validate automatically without a separate submit step.
+
+## Testing and Debugging
+- Used the **Live Server** VS Code extension to preview and test changes in real time.  
+- Checked for console messages in the browser’s Developer Tools to troubleshoot validation and logic.  
+- Used the VS Code **Problems** panel to locate and fix syntax or reference errors.
 
 ## GitHub Site URL
 [The deployed version of the dev branch can be found here](https://ellamkoch.github.io/Form-Validation/)
