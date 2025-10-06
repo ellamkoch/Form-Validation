@@ -54,6 +54,12 @@ function buildAgreementsText() {
         { box.checked = false; }); // unchecks all checkboxes
     });
 
+html5Form.addEventListener("reset", () => {
+  // hide and clear the summary box when “Clear Top Form” is pressed
+  html5Output.style.display = "none";
+  html5Output.textContent = "";
+});
+
 // JS Form Section
 
 // JS Variables
