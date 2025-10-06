@@ -11,20 +11,9 @@ body {
     background-color: #31711b;
 
 }
-/* password warning style */
-b {
-    color: rgb(252, 4, 62);
-    font-size: 10px;
 
-}
-/* instruction text style for interests*/
-em {
-    font-size: 12px;
-    color: #ffffff;
-    margin-top: -5px;
-    margin-bottom: 10px;
-}
-/*main form container */
+
+/*HTML5 form container */
 .html5_form {
     background-color: rgb(255, 170, 42);
     display: flex;
@@ -60,6 +49,12 @@ em {
     font-weight: bold;
     
 }
+
+.html5_form_field_label {
+    font-size: 14px;
+    font-weight: bold;
+
+}
 /* input fields style */
 .html5_form_field_input {
     border: solid 1px gray;
@@ -67,6 +62,8 @@ em {
     border-radius: 5px;
 
 }
+
+
 /* input focus style */
 .html5_form_field_input:focus {
     border-color: rgb(100, 239, 190);
@@ -74,43 +71,48 @@ em {
 
 }
 
-.html5_form_field label {
+/* Valid and Invalid styles */
+.html5_form_field_input:valid {
+    border-color: green;
+    background-color: lightgreen;
+    }
+
+.html5_form_field_input:invalid {
+      border-color: red;
+      background-color: lightcoral;
+    }
+
+#birthDate:valid, /* makes it so the birthdate field is ignored when it comes to validity*/
+#birthDate:invalid {
+  background-color: white;
+  border-color: gray;
+}
+
+/* password warning style */
+#passwordHelp {
+    color: rgb(252, 4, 62);
+    font-size: 12px;
+
+}
+
+/*Checkbox styles*/
+.agreeTerms {
+    margin-right: 3px;
     font-size: 14px;
-    font-weight: bold;
-
-}
-/* interests section style */
-.html5_form_row.interests { /*makes this so the legent sits right above the checkboxes */
-    flex-direction: column; /*stacks items vertically*/
-    align-items: stretch; /*makes the field take full width*/
-    gap: 5px;
-}
-
-/* styles for container for checkbox group  */
-.checkbox_group {
+    line-height: 1.5;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px 18px;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
     
 }
 
-/* individual checkbox item styles */
-.checkbox_item_input {
-    margin-right: 3px;
+/* submit & reset button styles */
 
-}
-/* label style for checkbox items */
-.checkbox_item_label {
-    margin-right: 18px;
-    font-size: 14px;
-    line-height: 1.3;
-
+.html5_button {
+    display: flex;
+    gap: 15px;
 }
 
-/* submit button styles */
-.js_form_submit {
+.html5_form_submit {
     background-color:#31711b;
     color: white;
     border: none;
@@ -119,8 +121,91 @@ em {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease; /*transitions background color smoothly*/
+    gap: 10px;
 
 }
+.html5_form_reset {
+    background-color:#e9f1e8;
+    color: rgb(255, 170, 42);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+
+}
+
+/* hover and active states for submit button */
+.html5_form_submit:hover {
+    background-color: #51b331;
+    transform: scale(1.05); /*slightly enlarges button on hover*/
+}
+
+.htm5_form_submit:active {
+    background-color: #579343;
+    transform: scale(0.95); /*slightly shrinks button on click*/
+}
+
+/*JS Form Container*/
+
+.js_form {
+    background-color: rgb(255, 170, 42);
+    display: flex;
+    flex-direction: column; /*stacks items vertically*/
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 30px auto;
+    width: 100%; /*full width on small screens*/
+    max-width: 800px;
+}
+
+.js_form_row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+}
+/* individual js form fields */
+.js_form_field {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+/* labels for js form fields */
+.js_form_field_label {
+    font-weight: bold;
+    
+}
+/* input js fields style */
+.js_form_field_input {
+    border: solid 1px gray;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#altUsernameHelp {
+    color: rgb(252, 4, 62);
+    font-size: 12px;
+}
+
+.js_form_submit {
+    background-color:#e9f1e8;
+    color: rgb(255, 170, 42);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+
+}
+
 /* hover and active states for submit button */
 .js_form_submit:hover {
     background-color: #51b331;

@@ -55,31 +55,45 @@
                 <label for="password" class="html5_form_field_label">Password:</label>
                 <input type="password" id="password" name="password" class="html5_form_field_input" required minlength="8" aria-describedby="passwordHelp">
                 <b id="passwordHelp">Passwords must be at least 8 characters.</b>
-                <div class="agreement">
-            <input type="checkbox" id="agreeTerms" name="agreeTerms">
-            <div class="agreement">
-                <label for="agreeTerms">I agree not to journal while driving, walking down a trail, while swimming, etc. and simply enjoy traveling and life to the best of my abilities.</label>
+                </div>
             </div>
-        </div>
-        </div>
+            <!-- Agreement-->
+             <div class="agreements">
+                <div class="agree_no_journal">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                    <label for="agreeTerms">I agree not to journal while driving, walking down a trail, being chased by a wild animal, swimming, etc.</label>
+                </div>
+                <div class="agree_enjoy">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms">I agree to enjoy traveling and life to the best of my abilities.</label>  
+                </div> 
+            </div>
        <!--Submit & Reset Buttons-->
+       <div class="html5_buttons">
         <button class="html5_form_submit" type="submit">Submit</button>
         <button class="html5_form_reset" type="reset">Clear Top Form</button>
+        </div>
     </form>
 
     <!--JavaScript Form-->
+    <h2> Alternate Username</h2>
     <form action="" class="js_form" id="js_form">
         <!-- Alt Username and Agreement Checkbox-->
-        <h2> Alternate Username</h2>
+        <p>Please enter an alternate username below in case your first one is taken.</p>
         <div class="js_form_row">
             <div class ="js_form_field">
-            <p>Please enter an alternate username below in case your first one is taken.</p></div>
-            <label for="altUsername" class="js_form_field_label">Alternate Username:</label>
-            <input type="text" id="altUsername" name="altUsername" class="js_form_field_input" aria-describedby="altUsernameHelp">
+                <label for="altUsername" class="js_form_field_label">Alternate Username:</label>
+                <input type="text" id="altUsername" name="altUsername" class="js_form_field_input" aria-describedby="altUsernameHelp">
             <b id="altUsernameHelp">Usernames must be at least 5 characters</b>
-        </div>
+            </div>
+             <div class="js_button">
+                <button class="js_form_submit" type="submit">Submit Alternate Username</button>
         </div>
            
+            </div>
+            <br>
+            
+        </div>
     </form>
 </main>
 <!--JavaScript-->
