@@ -34,7 +34,7 @@ There is an event listner for the Alt Username part of the form that checks to s
 Utilized the Live Server addon to test the form/debug it and to double check the console within the browser. Also used the "problems" section in vs Code to help identify areas that were coded incorrectly.
 
 ## GitHub Site URL
-The deployed version of the dev branch can be found here - 
+[The deployed version of the dev branch can be found here](https://ellamkoch.github.io/Form-Validation/)
 
 ## GitHub repository
 [The GitHub repository for this assignment can be found here ](https://github.com/ellamkoch/Form-Validation/tree/dev)
