@@ -142,7 +142,7 @@ body {
     transform: scale(1.05); /*slightly enlarges button on hover*/
 }
 
-.htm5_form_submit:active {
+.html5_form_submit:active {
     background-color: #579343;
     transform: scale(0.95); /*slightly shrinks button on click*/
 }
