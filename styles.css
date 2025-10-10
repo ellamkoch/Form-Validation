@@ -1,0 +1,247 @@
+
+/* headings */
+h1, h2 {
+    text-align: center;
+    color: #deff07;
+}
+
+/* body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #31711b;
+
+}
+
+
+/*HTML5 form container */
+.html5_form {
+    background-color: rgb(255, 170, 42);
+    display: flex;
+    flex-direction: column; /*stacks items vertically*/
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 0 auto;
+    width: 100%; /*full width on small screens*/
+    max-width: 800px;
+    gap: 10px;
+
+}
+/* rows within the form */
+.html5_form_row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+}
+/* individual form fields */
+.html5_form_field {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+/* labels for form fields */
+.html5_form_field_label {
+    font-weight: bold;
+    
+}
+
+.html5_form_field_label {
+    font-size: 14px;
+    font-weight: bold;
+
+}
+/* input fields style */
+.html5_form_field_input {
+    border: solid 1px gray;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+
+/* input focus style */
+.html5_form_field_input:focus {
+    border-color: rgb(100, 239, 190);
+    outline: rgb(100, 239, 190);
+
+}
+
+/* Valid and Invalid styles */
+.html5_form_field_input:valid {
+    border-color: green;
+    background-color: lightgreen;
+    }
+
+.html5_form_field_input:invalid {
+      border-color: red;
+      background-color: lightcoral;
+    }
+
+#birthDate, #firstName, #lastName:valid, /* makes it so these fields are ignored when it comes to validity*/
+#birthDate, #firstName, #lastName:invalid {
+  background-color: white;
+  border-color: gray;
+}
+
+/* password warning style */
+#passwordHelp {
+    color: rgb(252, 4, 62);
+    font-size: 12px;
+
+}
+
+/*Checkbox styles*/
+.agreeTerms {
+    margin-right: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* submit & reset button styles */
+
+.html5_button {
+    display: flex;
+    gap: 15px;
+}
+
+.html5_form_submit {
+    background-color:#31711b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+    gap: 10px;
+
+}
+.html5_form_reset {
+    background-color:#e9f1e8;
+    color: rgb(255, 170, 42);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+
+}
+
+/* hover and active states for submit button */
+.html5_form_submit:hover {
+    background-color: #51b331;
+    transform: scale(1.05); /*slightly enlarges button on hover*/
+}
+
+.html5_form_submit:active {
+    background-color: #579343;
+    transform: scale(0.95); /*slightly shrinks button on click*/
+}
+
+#output_html5Form {
+    display: none;
+    background-color: rgba(41, 77, 4, 0.594);
+    color: whitesmoke; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+
+}
+
+/*JS Form Container*/
+
+.js_form {
+    background-color: rgb(255, 170, 42);
+    display: flex;
+    flex-direction: column; /*stacks items vertically*/
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 30px auto;
+    width: 100%; /*full width on small screens*/
+    max-width: 800px;
+}
+
+.js_form_row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+}
+/* individual js form fields */
+.js_form_field {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+/* labels for js form fields */
+.js_form_field_label {
+    font-weight: bold;
+    
+}
+/* input js fields style */
+.js_form_field_input {
+    border: solid 1px gray;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+#altUsernameHelp {
+    color: rgb(252, 4, 62);
+    font-size: 12px;
+}
+
+.js_form_submit {
+    background-color:#e9f1e8;
+    color: rgb(255, 170, 42);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /*transitions background color smoothly*/
+
+}
+
+/* hover and active states for js submit button */
+.js_form_submit:hover {
+    background-color: #51b331;
+    transform: scale(1.05); /*slightly enlarges button on hover*/
+}
+
+.js_form_submit:active {
+    background-color: #579343;
+    transform: scale(0.95); /*slightly shrinks button on click*/
+}
+
+/* js output section styles */
+#output_jsForm {
+    display: none;
+    background-color: rgba(41, 77, 4, 0.594);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(88, 84, 84, 0.607);
+    margin: 10px auto;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+
+}

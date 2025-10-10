@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Traveler's Journal Signup</title>
+</head>
+<body>
+    <main>
+    <h1 class ="signup">Create your Traveler's Journal Account here!</h1>
+    <!-- HTML5 form-->
+    <form action="" class ="html5_form" id="html5_form">
+ <!--Name Fields in a Row-->
+        <div class="html5_form_row">
+            <!--First Name-->
+            <div class="html5_form_field">
+                <label for="firstName" class="html5_form_field_label">First Name:</label>
+                <input type="text" id="firstName" name="firstName" class="html5_form_field_input" required>
+            </div>
+        
+            <!--Last Name-->
+            <div class="html5_form_field">
+                <label for="lastName" class="html5_form_field_label">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" class="html5_form_field_input" required>
+            </div>
+        </div>
+
+        <!--Email and birthdate in a row-->
+        <div class="html5_form_row">
+            <div class="html5_form_field">
+            <!--Email-->
+                <label for="email" class="html5_form_field_label">Email:</label>
+                <input type="email" id="email" name="email" class="html5_form_field_input" required>
+            </div>
+        
+            <!-- Birth date-->
+            <div class="html5_form_field">
+                <label for="birthDate" class="html5_form_field_label">Birth Date:</label>
+                <input type="date" id="birthDate" name="birthDate" class="html5_form_field_input" required> 
+                </div>
+        </div>
+          
+            <!--username and password in a row-->
+           <div class="html5_form_row">
+             <!--Username-->
+            <div class="html5_form_field">
+                <label for="username" class="html5_form_field_label">Username:</label>
+                <input type="text" id="username" name="username" class="html5_form_field_input" required minlength="5">
+            </div>
+          <!--Password-->
+            <div class="html5_form_field">
+                <label for="password" class="html5_form_field_label">Password:</label>
+                <input type="password" id="password" name="password" class="html5_form_field_input" required minlength="8" aria-describedby="passwordHelp">
+                <b id="passwordHelp">Passwords must be at least 8 characters.</b>
+                </div>
+            </div>
+            <!-- Agreement-->
+             <div class="agreementsGroup">
+                <div class="agree_safe">
+                    <input type="checkbox" id="agree-safe" name="agreements[]" class="checkbox_item_input" value="safe" required>
+                    <label for="agree-safe" class="checkbox_item_label">I agree not to journal while driving, walking down a trail, being chased by a wild animal, swimming, etc.</label>
+                </div>
+                <div class="agree_enjoy">
+                <input type="checkbox" id="agree-enjoy" name="agreements[]" class="checkbox_item_input" value="enjoy" required>
+                <label for="agree-enjoy" class="checkbox_item_label">I agree to enjoy traveling and life to the best of my abilities.</label>  
+                </div> 
+            </div>
+       <!--Submit & Reset Buttons-->
+       <div class="html5_buttons">
+        <button class="html5_form_submit" type="submit">Submit</button>
+        <button class="html5_form_reset" type="reset">Clear Top Form</button>
+        </div>
+         <!-- Live region for JS messages -->
+    <div id="output_html5Form" class="html5FormMessage" aria-live="polite" role="status" aria-atomic="true"></div>
+    </form>
+
+    <!--JavaScript Form-->
+    <h2> Alternate Username</h2>
+    <form action="" class="js_form" id="js_form" novalidate>
+    <p>Please enter an alternate username below in case your first one is taken.</p>
+
+        <div class="js_form_row">
+         <div class="js_form_field">
+            <label for="altUsername" class="js_form_field_label">Alternate Username:</label>
+            <input type="text" id="altUsername" name="altUsername" class="js_form_field_input" aria-describedby="altUsernameHelp output_jsForm">
+            <b id="altUsernameHelp">Usernames must be at least 5 characters</b>
+        </div>
+    </div>
+
+    <div class="js_button">
+        <button class="js_form_submit" type="submit">Submit Alternate Username</button>
+    </div>
+
+    <!-- Live region for JS messages -->
+    <div id="output_jsForm" class="jsFormMessage" aria-live="polite" role="status" aria-atomic="true"></div>
+</form>
+
+</main>
+<!--JavaScript-->
+    <script src="./script.js"></script>
+</body>
+</html>
